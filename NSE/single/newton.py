@@ -56,17 +56,13 @@ def x_func_left(t: float) -> float:
 
 
 def main():
-    eps = 1e-3
+    eps = 1e-9
     
     print('Newton method:')
-    x1, i1 = newton(f, f_der, -0.5, eps, return_iter=True)
-    print(f'x1: {x1}\nIterations: {i1}')
-    x2, i2 = newton(f, f_der, 1.5, eps, return_iter=True)
-    print(f'x2: {x2}\nIterations: {i2}\n')
+    x1, i1 = newton(f, f_der, 1.5, eps, return_iter=True)
+    print(f'x2: {x1}\nIterations: {i1}\n')
     
     print('Simple iterations method:')
-    x1, i1 = simple_iterations(x_func_left, -0.5, eps, return_iter=True)
-    print(f'x1: {x1}\nIterations: {i1}')
     x2, i2 = simple_iterations(x_func_right, 1.5, eps, return_iter=True)
     print(f'x2: {x2}\nIterations: {i2}\n')
 

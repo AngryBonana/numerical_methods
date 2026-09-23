@@ -11,6 +11,8 @@ def make_graphic(a: float, b: float, func, dots: int = 100) -> None:
     ox = np.zeros(x.size)
     plt.plot(x, y)
     plt.plot(x, ox)
+    plt.grid(True)
+    plt.title('Графическое решение уравнения')
     plt.show()
     
     
